@@ -1,0 +1,487 @@
+/* --- REGISTER --- */
+.register-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.register-bg-container {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.register-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.register-overlay {
+    position: absolute;
+    inset: 0;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter: blur(3px); 
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 850px; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.form-header h3 {
+    color: #b91c1c;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-header {
+    background: #fef2f2;
+    color: #b91c1c;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    margin: 25px 0 15px 0;
+    text-transform: uppercase;
+    border-left: 4px solid #b91c1c;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px 20px;
+}
+
+.form-grid > div,
+.full-width {
+    min-width: 0;
+}
+
+.full-width {
+    grid-column: 1 / -1; 
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+input, select {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #f9fafb;
+}
+
+.select-wrap {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.select-wrap select {
+    display: none;
+}
+
+.custom-select-button {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-select-button:focus {
+    border-color: #b91c1c;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+    outline: none;
+}
+
+.custom-select-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #4b5563;
+    pointer-events: none;
+}
+
+.custom-select-menu {
+    position: absolute;
+    z-index: 40;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    display: none;
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.custom-select-menu.open {
+    display: block;
+}
+
+.custom-select-option {
+    width: 100%;
+    padding: 12px 15px;
+    border: 0;
+    background: #fff;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #111827;
+    cursor: pointer;
+}
+
+.custom-select-option:hover,
+.custom-select-option.selected {
+    background: #f3f4f6;
+}
+
+@media (max-width: 520px) {
+  .custom-select-button {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+input:focus, select:focus {
+    border-color: #b91c1c;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.1);
+}
+
+.field-note {
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.privacy-consent {
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #b91c1c;
+    border-radius: 6px;
+    background: #fff7f7;
+}
+
+.privacy-review {
+    margin-top: 24px;
+}
+
+.privacy-scroll {
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 18px 18px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(156, 163, 175, 0.1);
+    margin-top: 12px;
+}
+
+.privacy-scroll h4,
+.privacy-scroll h5 {
+    color: #111827;
+    margin: 0 0 10px;
+}
+
+.privacy-scroll h4 {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.privacy-scroll h5 {
+    font-size: 0.95rem;
+    margin-top: 14px;
+    font-weight: 700;
+}
+
+.privacy-scroll p,
+.privacy-scroll ul,
+.privacy-scroll li {
+    color: #374151;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.privacy-scroll p {
+    margin: 0 0 10px;
+}
+
+.privacy-scroll ul {
+    margin: 0 0 12px 18px;
+    padding-left: 0;
+}
+
+.privacy-scroll li + li {
+    margin-top: 4px;
+}
+
+.privacy-consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+    color: #374151;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.privacy-consent-label input[type="checkbox"] {
+    appearance: auto;
+    flex: 0 0 18px;
+    width: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    margin: 2px 0 0;
+    padding: 0 !important;
+    box-sizing: border-box;
+    accent-color: #b91c1c;
+}
+
+.register-btn {
+    width: 100%;
+    background: #b91c1c;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #991b1b;
+}
+
+.register-btn:disabled,
+.register-btn:disabled:hover {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #b91c1c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.flash-messages-container {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* --- FLASH MESSAGES --- */
+.error-msg {
+    color: #b91c1c;             
+    background: #fef2f2;       
+    font-weight: 700;         
+    padding: 12px 20px;         
+    font-size: 0.95rem;
+    border-radius: 10px;        
+    display: inline-block;      
+    min-width: 80%;            
+}
+
+.success-msg {
+    color: #15803d;            
+    background: #f0fdf4;        
+    font-weight: 700;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-radius: 10px;      
+    display: inline-block;
+    min-width: 80%;
+    margin: 5px 0;
+}
+
+
+
+/* --- BREAKPOINTS --- */
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 15px;
+    }
+    .form-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* CRITICAL: remove flex height restriction */
+.register-section {
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
+
+  display: block; /* IMPORTANT: removes vertical locking */
+
+  padding: 60px 20px 120px; /* ensures bottom access */
+  box-sizing: border-box;
+}
+
+/* Keep card centered visually without breaking scroll */
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Extra guaranteed scroll buffer */
+.register-section::after {
+  content: "";
+  display: block;
+  height: 120px;
+}
+
+/* Mobile fix (prevents bottom cutoff when keyboard/nav bars appear) */
+@media (max-height: 700px) {
+  .register-section {
+    padding-top: 30px;
+    padding-bottom: 140px;
+  }
+}
+
+/* Register mobile polish */
+.container,
+.form-header,
+.section-header,
+.footer-links {
+  min-width: 0;
+}
+
+.form-header h3,
+.section-header,
+.field-note,
+.footer-links {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .register-section {
+    padding: 28px 12px 110px;
+  }
+
+  .container {
+    padding: 22px 16px;
+    border-radius: 10px;
+  }
+
+  .logo {
+    width: 72px;
+  }
+
+  .form-header {
+    margin-bottom: 22px;
+  }
+
+  .section-header {
+    margin: 20px 0 12px;
+    font-size: 0.82rem;
+  }
+
+  .form-grid > div,
+  .full-width {
+    min-width: 0;
+  }
+
+  input,
+  select,
+  .register-btn {
+    min-height: 44px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .error-msg,
+  .success-msg {
+    min-width: 0;
+    width: 100%;
+  }
+}

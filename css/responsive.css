@@ -1,0 +1,212 @@
+html {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    max-width: 100%;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+}
+
+main,
+section,
+article,
+aside,
+nav,
+header,
+footer,
+form,
+fieldset {
+    min-width: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.table-wrap,
+.table-responsive {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .official-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .official-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .official-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .official-grid .official-card {
+        width: 100%;
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav-menu-desktop,
+    .search-section-desktop {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    button,
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    .complaint-section {
+        min-height: 0;
+        padding: 32px 0;
+    }
+
+    .complaint-card {
+        padding: clamp(16px, 5vw, 32px);
+    }
+
+    .complaint-section .title-main {
+        font-size: clamp(1.4rem, 6vw, 1.875rem);
+        overflow-wrap: anywhere;
+    }
+
+    .checkbox-item {
+        align-items: flex-start;
+    }
+
+    .form-footer {
+        flex-wrap: wrap;
+    }
+
+    .btn-clear,
+    .btn-submit {
+        min-height: 44px;
+    }
+
+    .hotline-hero {
+        min-height: 0;
+        padding: 36px 16px;
+    }
+
+    .hotline-hero .hero-title {
+        font-size: clamp(1.65rem, 7vw, 2.6rem);
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+
+    .hotline-card {
+        flex: 1 1 100%;
+        min-width: 0;
+        padding: 18px 16px;
+    }
+
+    .card-number {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        overflow-wrap: anywhere;
+    }
+
+    .hotline-directory,
+    .additional-resources {
+        padding: 40px 14px;
+    }
+
+    .contact-list li {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        padding: 12px 14px;
+    }
+
+    .num,
+    .res-phone {
+        overflow-wrap: anywhere;
+    }
+
+    .about-bar {
+        height: auto;
+        min-height: 88px;
+        padding: 18px 14px;
+    }
+
+    .about-title {
+        font-size: clamp(1.15rem, 5vw, 1.5rem);
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+
+    .about-visual-section {
+        padding: 32px 14px;
+    }
+
+    .about-info-section {
+        padding: 40px 16px;
+    }
+
+    .info-heading {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 20px;
+    }
+
+    .info-paragraph {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

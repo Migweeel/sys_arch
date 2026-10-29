@@ -1,0 +1,184 @@
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .site-header {
+    padding: 16px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+  }
+
+  .user-welcome {
+    font-size: 13px;
+  }
+
+  .sub-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-item {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+
+  #section-main-content {
+    padding: 24px 0 40px;
+  }
+
+  .card {
+    padding: 24px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-header {
+    margin-bottom: 24px;
+  }
+
+  .card-title-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+  }
+
+  .request-form {
+    gap: 20px;
+  }
+
+  .form-group {
+    gap: 10px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-select,
+  .form-textarea,
+  .form-input,
+  .file-input {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .requirements-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .requirements-list {
+    gap: 12px;
+  }
+
+  .requirement-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  #section-main-content {
+    padding: 20px 0 30px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .brand-title {
+    font-size: 22px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    padding: 15px;
+  }
+
+  .requirement-item {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .site-header {
+    padding: 14px 0;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-subtitle {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+  }
+
+  .requirement-item {
+    padding: 12px;
+  }
+
+  .action-btn {
+    padding: 10px;
+  }
+}

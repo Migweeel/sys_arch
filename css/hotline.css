@@ -1,0 +1,283 @@
+/* --- HOTLINE --- */
+.hotline-hero {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-bg-img {
+    position: absolute;
+    inset: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(185, 28, 28, 0.85);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.emergency-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* --- HOTLINE CARDS --- */
+.hotline-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hotline-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 40px;
+    border-radius: 12px;
+    min-width: 280px;
+}
+
+.card-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.card-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.important-banner {
+    background-color: #fefce8;
+    border-bottom: 2px solid #fef08a;
+    padding: 15px 20px;
+    text-align: center;
+    color: #854d0e;
+    font-size: 0.95rem;
+}
+
+.hotline-directory {
+    padding: 60px 20px;
+    background-color: #f9fafb;
+}
+
+.directory-container, 
+.resources-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
+
+.directory-container {
+    grid-template-columns: 1fr;
+}
+
+.directory-card, 
+.res-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.directory-card {
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #b91c1c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    background: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-list li::before {
+    content: "\eb92";
+    font-family: 'remixicon';
+    color: #b91c1c;
+    margin-right: 10px;
+}
+
+.num, 
+.res-phone {
+    font-weight: 700;
+    color: #b91c1c;
+}
+
+.additional-resources {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.resource-main-title {
+    font-size: 2rem;
+    color: #b91c1c;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.resources-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.res-card {
+    padding: 40px 20px;
+    border-radius: 12px;
+    border-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.res-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: #fef2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.res-icon-wrapper i {
+    font-size: 2rem;
+    color: #b91c1c;
+}
+
+.res-card h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.res-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.res-phone {
+    font-size: 1.5rem;
+}
+
+
+
+/* --- BREAKPOINTS --- */
+
+/* Medium Devices (md: 768px) */
+@media (min-width: 768px) {
+    /* HOTLINE */
+    .hero-title { font-size: 2.6rem; }
+    .hero-subtitle {font-size: 1.1rem;}
+    .hotline-card { min-width: 320px; }
+    .directory-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Large Devices (lg: 1024px) */
+@media (min-width: 1024px) {
+    /* HOTLINE */
+    .directory-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
+    .hero-title { font-size: 3.1rem; }
+}
+
+/* Extra Large Devices (xl: 1280px) */
+@media (min-width: 1280px) {
+    /* HOTLINE */
+    .directory-container, 
+    .resources-grid {
+        max-width: 1400px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .directory-card, .res-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .directory-card:hover, .res-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header { padding: 20px 25px; }
+    .card-header h3 { font-size: 1.25rem; }
+    .contact-list li { padding: 15px 25px; font-size: 1.05rem; }
+    .res-card { padding: 50px 30px; }
+}
+

@@ -1,0 +1,104 @@
+.site-search-page {
+  min-height: 58vh;
+  padding: 48px 20px 72px;
+  background: #f9fafb;
+}
+
+.site-search-container {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.site-search-heading {
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-search-eyebrow {
+  margin: 0 0 8px;
+  color: #b91c1c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.site-search-heading h1 {
+  margin: 0 0 8px;
+  color: #101828;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.site-search-heading > p:last-child {
+  margin: 0;
+  color: #4a5565;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.site-search-heading strong {
+  color: #101828;
+  overflow-wrap: anywhere;
+}
+
+.site-search-count {
+  margin: 22px 0 10px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.site-search-results {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.site-search-results li {
+  padding: 18px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-search-results a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #991b1b;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-search-results a:hover {
+  color: #b91c1c;
+  text-decoration: underline;
+}
+
+.site-search-results p {
+  margin: 6px 28px 0 0;
+  color: #4a5565;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.site-search-empty {
+  margin: 24px 0 0;
+  color: #4a5565;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .site-search-page {
+    min-height: 55vh;
+    padding: 32px 16px 48px;
+  }
+
+  .site-search-heading h1 {
+    font-size: 25px;
+  }
+
+  .site-search-results a {
+    font-size: 16px;
+  }
+}
